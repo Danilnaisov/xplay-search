@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.header__title {
+  margin-left: 10px;
+}
+
+.header__subtitle {
+  color: #737980;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.header__counter {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.logo__img {
+  width: 50px;
+}
