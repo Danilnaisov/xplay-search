@@ -1,0 +1,61 @@
+.card {
+  width: 300px;
+  height: 370px;
+  background: #101112;
+  border: 1px #5f5f5f solid;
+}
+
+.item__header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.item__gunname {
+  color: white;
+}
+
+.item__skinname {
+  color: #aeb3b9;
+}
+
+.item__skinexterior {
+  color: #737980;
+}
+
+.item__price {
+  margin: 10px;
+  margin-bottom: auto;
+  align-items: center;
+  gap: 4px;
+  display: flex;
+  color: #aeb3b9;
+}
+
+.item__price img {
+  width: 14px;
+}
+
+.currency {
+  color: #e0cb94;
+}
+
+.item__image {
+  width: 222px;
+  margin: auto;
+}
+
+.item__additional {
+  color: #8bb4b8;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 5px;
+}

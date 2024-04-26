@@ -1,0 +1,41 @@
+.page {
+  display: flex;
+  width: 100%;
+}
+
+.cardList {
+  margin-left: 20px;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter {
+  width: 25%;
+  color: white;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-left: 10px;
+  align-items: center;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.filter ul {
+  list-style: none;
+  margin-left: 15px;
+}
+
+.filter__quality {
+  margin-left: 15px;
+}
+.filter__type {
+  margin-left: 15px;
+}
+
+.filter label {
+  cursor: pointer;
+}
