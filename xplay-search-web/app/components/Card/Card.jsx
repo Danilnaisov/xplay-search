@@ -1,6 +1,26 @@
 import Styles from "./Card.module.css";
+import { useRouter } from "next/navigation";
 
 export const Card = (props) => {
+  const steamClick = (e) => {
+    e.preventDefault();
+    window.open(
+      `https://steamcommunity.com/market/listings/730/${link}`,
+      "_blank"
+    );
+  };
+
+  const xplayClick = (e) => {
+    e.preventDefault();
+    window.open(`https://xplay.gg/ru/store?itemId=${props.ID}`, "_blank");
+  };
+
+  const link = `${encodeURIComponent(
+    props.WeaponName
+  )}%20%7C%20${encodeURIComponent(props.SkinName)}%20%28${encodeURIComponent(
+    props.Exterior
+  )}%29`;
+
   return (
     <div className={Styles["card"]}>
       <div className={Styles["item__header"]}>
@@ -22,10 +42,17 @@ export const Card = (props) => {
       </div>
       <div className={Styles["item__image"]}>
         <img
+          className={Styles["preview__image"]}
           src={`https://cdn.xplay.cloud/img/store/${props.ID}_icon.png`}
           alt="skinpreview"
         />
+        <img
+          className={Styles["rarity__image"]}
+          src={`/images/${props.Rarity.replace(" ", "")}.svg`}
+          alt="raritypreview"
+        />
       </div>
+
       <div className={Styles["item__additional"]}>
         <p>
           {[
@@ -37,6 +64,10 @@ export const Card = (props) => {
             .map((item) => item.text)
             .join(" & ")}
         </p>
+      </div>
+      <div className={Styles["item__links"]}>
+        <img src="/images/steam.svg" alt="" onClick={steamClick} />
+        <img src="/images/link.svg" alt="" onClick={xplayClick} />
       </div>
     </div>
   );
