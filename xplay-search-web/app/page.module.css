@@ -1,14 +1,22 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px;
-  gap: 70px;
+  margin-bottom: 5vw;
+  margin-top: 2.5vw;
+  max-width: 840px;
+  gap: 4vw;
 }
 
 .card {
   position: relative;
-  width: 840px;
+  min-width: 90vw;
   color: white;
   display: flex;
   flex-direction: row;
@@ -42,61 +50,83 @@
 }
 
 .card:hover img {
-  transform: translateY(-10px);
+  transform: translateY(-0.5vw);
 }
 
-.all_card {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background: #406c5c;
-  position: relative;
-}
-
-.knife_card {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background: #41406c;
-  position: relative;
-}
-
-.pistol_card {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background: #373631;
-  position: relative;
-}
-
-.rifle_card {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background: #777152;
-  position: relative;
-}
-
-.sniperrifle_card {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background: #da5637;
-  position: relative;
-}
-
-.smg_card {
-  width: 100%;
-  height: 150px;
-  border-radius: 40px;
-  background: #6f9825;
-  position: relative;
-}
-
+.all_card,
+.knife_card,
+.pistol_card,
+.rifle_card,
+.sniperrifle_card,
+.smg_card,
 .shotgun_card {
   width: 100%;
   height: 150px;
   border-radius: 40px;
-  background: #d5953d;
   position: relative;
+}
+
+.all_card {
+  background: #406c5c;
+}
+.knife_card {
+  background: #41406c;
+}
+.pistol_card {
+  background: #373631;
+}
+.rifle_card {
+  background: #777152;
+}
+.sniperrifle_card {
+  background: #da5637;
+}
+.smg_card {
+  background: #6f9825;
+}
+.shotgun_card {
+  background: #d5953d;
+}
+
+@media only screen and (max-width: 950px) {
+  .card h1 {
+    font-size: 4vw;
+    font-weight: 900;
+  }
+
+  .card h1,
+  .card h2 {
+    top: 3vw;
+    left: 2vw;
+  }
+
+  .card h2 {
+    font-size: 2vw;
+    font-weight: 400;
+    top: 9vw;
+  }
+
+  .card {
+    align-items: center;
+  }
+
+  .card img {
+    max-width: 30vw;
+  }
+
+  .card h1,
+  .card h2 {
+    text-align: center;
+  }
+
+  .all_card,
+  .knife_card,
+  .pistol_card,
+  .rifle_card,
+  .sniperrifle_card,
+  .smg_card,
+  .shotgun_card {
+    height: 15vw;
+    border-radius: 4vw;
+  }
 }
