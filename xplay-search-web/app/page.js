@@ -33,66 +33,66 @@ export default function Home() {
         <Link href={"/all"}>
           <div className={styles["card"]}>
             <div className={styles["all_card"]}>
+              <img src="../images/all_card.svg" alt="" />
               <h1>Все</h1>
               <h2>Найдено: {data.length ? data.length : 0}</h2>
             </div>
-            <img src="../images/all_card.svg" alt="" />
           </div>
         </Link>
         <Link href={"/knifes"}>
           <div className={styles["card"]}>
             <div className={styles["knife_card"]}>
+              <img src="../images/knife_card.svg" alt="" />
               <h1>Ножи / Перчатки</h1>
               <h2>Найдено: {knifesData.length ? knifesData.length : 0}</h2>
             </div>
-            <img src="../images/knife_card.svg" alt="" />
           </div>
         </Link>
         <Link href={"/pistols"}>
           <div className={styles["card"]}>
             <div className={styles["pistol_card"]}>
+              <img src="../images/pistol_card.svg" alt="" />
               <h1>Пистолеты</h1>
               <h2>Найдено: {pistolsData.length ? pistolsData.length : 0}</h2>
             </div>
-            <img src="../images/pistol_card.svg" alt="" />
           </div>
         </Link>
         <Link href={"/rifles"}>
           <div className={styles["card"]}>
             <div className={styles["rifle_card"]}>
+              <img src="../images/rifle_card.svg" alt="" />
               <h1>Винтовки</h1>
               <h2>Найдено: {riflesData.length ? riflesData.length : 0}</h2>
             </div>
-            <img src="../images/rifle_card.svg" alt="" />
           </div>
         </Link>
         <Link href={"/sniperrifles"}>
           <div className={styles["card"]}>
             <div className={styles["sniperrifle_card"]}>
+              <img src="../images/sniperrifle_card.svg" alt="" />
               <h1>Снайперские винтовки</h1>
               <h2>
                 Найдено: {sniperriflesData.length ? sniperriflesData.length : 0}
               </h2>
             </div>
-            <img src="../images/sniperrifle_card.svg" alt="" />
           </div>
         </Link>
         <Link href={"/smg"}>
           <div className={styles["card"]}>
             <div className={styles["smg_card"]}>
+              <img src="../images/smg_card.svg" alt="" />
               <h1>ПП</h1>
               <h2>Найдено: {smgData.length ? smgData.length : 0}</h2>
             </div>
-            <img src="../images/smg_card.svg" alt="" />
           </div>
         </Link>
         <Link href={"/shotguns"}>
           <div className={styles["card"]}>
             <div className={styles["shotgun_card"]}>
+              <img src="../images/shotgun_card.svg" alt="" />
               <h1>Дробовики</h1>
               <h2>Найдено: {shotgunsData.length ? shotgunsData.length : 0}</h2>
             </div>
-            <img src="../images/shotgun_card.svg" alt="" />
           </div>
         </Link>
       </main>

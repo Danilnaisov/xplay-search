@@ -31,14 +31,14 @@
 .card h1,
 .card h2 {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 20px;
 }
 
 .card h2 {
   font-size: 36px;
   font-weight: 400;
-  top: 90px;
+  top: 85px;
 }
 
 .card img {
@@ -90,7 +90,7 @@
 
 @media only screen and (max-width: 950px) {
   .card h1 {
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: 900;
   }
 
@@ -101,9 +101,9 @@
   }
 
   .card h2 {
-    font-size: 2vw;
+    font-size: 4vw;
     font-weight: 400;
-    top: 9vw;
+    top: 12vw;
   }
 
   .card {
@@ -111,7 +111,8 @@
   }
 
   .card img {
-    max-width: 30vw;
+    top: -8vw;
+    max-width: 35vw;
   }
 
   .card h1,
@@ -126,7 +127,7 @@
   .sniperrifle_card,
   .smg_card,
   .shotgun_card {
-    height: 15vw;
-    border-radius: 4vw;
+    height: 20vw;
+    border-radius: 5vw;
   }
 }
