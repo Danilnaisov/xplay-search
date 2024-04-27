@@ -1,12 +1,13 @@
 .header {
   display: flex;
-  height: 100px;
+  min-height: 100px;
   align-items: center;
   margin-left: 60px;
 }
 
 .header__title {
   margin-left: 10px;
+  align-content: center;
 }
 
 .header__subtitle {
@@ -23,4 +24,21 @@
 
 .logo__img {
   width: 50px;
+}
+
+@media only screen and (max-width: 819px) {
+  .header {
+    margin-left: 6vw;
+    min-height: 15vw;
+  }
+  .logo__img {
+    max-width: 9vw;
+  }
+  .header__subtitle {
+    font-size: 16px;
+  }
+
+  .header__counter {
+    font-size: 18px;
+  }
 }
