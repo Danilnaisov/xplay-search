@@ -1,7 +1,20 @@
+"use client";
+
 import Styles from "./Card.module.css";
-import { useRouter } from "next/navigation";
+//import { getprice } from "@/app/price/getprice";
 
 export const Card = (props) => {
+  const link = `${encodeURIComponent(
+    props.WeaponName
+  )}%20%7C%20${encodeURIComponent(props.SkinName)}%20%28${encodeURIComponent(
+    props.Exterior
+  )}%29`;
+
+  const xPrice = props.XPrice;
+  const steamPrice = 1;
+
+  //console.log(getprice(link));
+
   const steamClick = (e) => {
     e.preventDefault();
     window.open(
@@ -15,12 +28,6 @@ export const Card = (props) => {
     window.open(`https://xplay.gg/ru/store?itemId=${props.ID}`, "_blank");
   };
 
-  const link = `${encodeURIComponent(
-    props.WeaponName
-  )}%20%7C%20${encodeURIComponent(props.SkinName)}%20%28${encodeURIComponent(
-    props.Exterior
-  )}%29`;
-
   return (
     <div className={Styles["card"]}>
       <div className={Styles["item__header"]}>
@@ -32,11 +39,11 @@ export const Card = (props) => {
           <p className={Styles["item__skinexterior"]}>{props.Exterior}</p>
         </div>
         <div className={Styles["item__price"]}>
-          <p>{props.XPrice}</p>
+          <p>{xPrice}</p>
           <img src="/images/xcoin.svg" alt="xcoin" />
           <p>|</p>
           <p>
-            1.93 <span className={Styles["currency"]}>$</span>
+            {steamPrice} <span className={Styles["currency"]}>$</span>
           </p>
         </div>
       </div>
