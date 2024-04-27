@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import Styles from "./CardList.module.css";
 import { getAllData } from "@/app/api/api-utils";
+import { Preloader } from "../Preloader/Preloader";
 
 export const CardList = (props) => {
   const [data, setData] = useState([]);
@@ -20,17 +21,20 @@ export const CardList = (props) => {
 
     fetchData();
   }, []);
+
+  const filteredData = data.filter((item) => props.types.includes(item.Type));
+
   return (
     <div className={Styles["page"]}>
-      {data.length === 0 ? (
-        <div className={Styles["datat__not-found"]}>
-          <h3>Нет скинов в данной категории</h3>
+      {filteredData.length === 0 ? (
+        <div className={Styles["data__not-found"]}>
+          <Preloader />
         </div>
       ) : (
         <>
           <div className={Styles["cardList"]}>
-            {data.map((data) => (
-              <Card type={props.type} {...data} />
+            {filteredData.map((item, index) => (
+              <Card key={index} {...item} />
             ))}
           </div>
           <div className={Styles["filter"]}>

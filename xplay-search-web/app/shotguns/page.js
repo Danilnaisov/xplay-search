@@ -1,9 +1,9 @@
 import { CardList } from "../components/CardList/CardList";
 
-export default function shotguns() {
+export default function shotgun() {
   return (
     <div>
-      <CardList />
+      <CardList types={["Shotguns"]} />
     </div>
   );
 }

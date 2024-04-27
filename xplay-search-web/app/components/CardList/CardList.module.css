@@ -39,3 +39,7 @@
 .filter label {
   cursor: pointer;
 }
+
+.data__not-found {
+  width: 100%;
+}

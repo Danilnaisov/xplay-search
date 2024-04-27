@@ -1,10 +1,11 @@
 import { CardList } from "../components/CardList/CardList";
-import Styles from "../page.module.css";
 
 export default function all() {
   return (
     <div>
-      <CardList />
+      <CardList
+        types={["Pistols", "SMGs", "Rifles", "Sniper Rifles", "Shotguns"]}
+      />
     </div>
   );
 }

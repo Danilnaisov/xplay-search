@@ -13,7 +13,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .card h1 {
@@ -37,7 +36,6 @@
 .card img {
   display: block;
   position: absolute;
-  max-width: 100%;
   transition: transform 0.2s ease-in-out;
   top: -70px;
   right: 0;
