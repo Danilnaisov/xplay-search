@@ -2,15 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin-bottom: 100px;
+  gap: 70px;
 }
 
 .card {
   position: relative;
   width: 840px;
   color: white;
-  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .card h1 {
@@ -21,20 +24,81 @@
 .card h1,
 .card h2 {
   position: absolute;
-  top: 90px;
+  top: 30px;
   left: 20px;
 }
 
 .card h2 {
   font-size: 36px;
   font-weight: 400;
-  top: 155px;
+  top: 90px;
 }
 
 .card img {
-  width: 840px;
+  display: block;
+  position: absolute;
+  max-width: 100%;
+  transition: transform 0.2s ease-in-out;
+  top: -70px;
+  right: 0;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.card:hover img {
+  transform: translateY(-10px);
+}
+
+.all_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #406c5c;
+  position: relative;
+}
+
+.knife_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #41406c;
+  position: relative;
+}
+
+.pistol_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #373631;
+  position: relative;
+}
+
+.rifle_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #777152;
+  position: relative;
+}
+
+.sniperrifle_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #da5637;
+  position: relative;
+}
+
+.smg_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #6f9825;
+  position: relative;
+}
+
+.shotgun_card {
+  width: 100%;
+  height: 150px;
+  border-radius: 40px;
+  background: #d5953d;
+  position: relative;
 }
