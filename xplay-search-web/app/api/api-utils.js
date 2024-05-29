@@ -35,3 +35,20 @@ export const getNoneDropData = async () => {
     return null;
   }
 };
+
+export const getPremiumData = async () => {
+  try {
+    const response = await fetch(endpoints.data);
+    if (!response.ok) {
+      throw new Error("Ошибка загрузки данных");
+    }
+    const data = await response.json();
+
+    const items = data.items.filter((item) => item.ForPremium === 1);
+
+    return items;
+  } catch (error) {
+    console.error("Произошла ошибка:", error);
+    return null;
+  }
+};

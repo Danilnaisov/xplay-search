@@ -54,6 +54,7 @@
 }
 
 .all_card,
+.premium_card,
 .knife_card,
 .pistol_card,
 .rifle_card,
@@ -68,6 +69,9 @@
 
 .all_card {
   background: #406c5c;
+}
+.premium_card {
+  background: #d6a469;
 }
 .knife_card {
   background: #41406c;
@@ -121,6 +125,7 @@
   }
 
   .all_card,
+  .premium_card,
   .knife_card,
   .pistol_card,
   .rifle_card,

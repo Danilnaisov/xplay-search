@@ -27,6 +27,8 @@ export default function Home() {
   const smgData = data.filter((item) => item.Type === "SMGs");
   const shotgunsData = data.filter((item) => item.Type === "Shotguns");
 
+  const premiumData = data.filter((item) => item.ForPremium);
+
   return (
     <div className={styles["wrapper"]}>
       <main className={styles["main"]}>
@@ -39,6 +41,17 @@ export default function Home() {
             </div>
           </div>
         </Link>
+
+        <Link href={"/premium"}>
+          <div className={styles["card"]}>
+            <div className={styles["premium_card"]}>
+              <img src="../images/premium.svg" alt="" />
+              <h1>Премиум</h1>
+              <h2>Найдено: {premiumData.length ? premiumData.length : 0}</h2>
+            </div>
+          </div>
+        </Link>
+
         <Link href={"/knifes"}>
           <div className={styles["card"]}>
             <div className={styles["knife_card"]}>

@@ -3,11 +3,12 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import Styles from "./CardList.module.css";
-import { getAllData } from "@/app/api/api-utils";
+import { getAllData, getPremiumData } from "@/app/api/api-utils";
 import { Preloader } from "../Preloader/Preloader";
 
 export const CardList = (props) => {
   const [data, setData] = useState([]);
+  const [premiumData, setPremiumData] = useState([]);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   useEffect(() => {
@@ -23,8 +24,25 @@ export const CardList = (props) => {
     fetchData();
   }, []);
 
-  const filteredData = data.filter((item) => props.types.includes(item.Type));
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const result = await getPremiumData();
+        setPremiumData(result);
+      } catch (error) {
+        console.error("Произошла ошибка:", error);
+      }
+    };
 
+    fetchData();
+  }, []);
+
+  let filteredData = null;
+  if (props.types.includes("Premium")) {
+    filteredData = premiumData;
+  } else {
+    filteredData = data.filter((item) => props.types.includes(item.Type));
+  }
   return (
     <div className={Styles["page"]}>
       {filteredData.length === 0 ? (
